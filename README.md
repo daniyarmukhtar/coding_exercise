@@ -6,7 +6,8 @@ This is Kotlin / Gradle / Spring Boot (version 2.2.11) application
 
 * Clone this repository
 * Make sure you are using JDK 1.8 and Maven 6.8.x
-* You can build the project by bootJar task of gradle
+* Build the project by bootJar task of gradle.
+  After coding_exercise-0.0.1-SNAPSHOT.jar will be located in path - ~/build/libs/
 * Once successfully built, you can run the service by:
 ```
         java -jar coding_exercise-0.0.1-SNAPSHOT.jar
@@ -19,22 +20,22 @@ Once the application runs you should see something like this
 
 ## About the Service
 
-The project is simple Contact REST service. It uses an in-memory database (H2) to store the data. You can use MySQL. You can call some REST endpoints defined in ```com.example.coding_exercise.ui.controller.ContactController``` on default **port 8080** by application.properties configuration.
+The project is simple Contact REST service. It uses an in-memory database (H2) to store the data. You can use MySQL. You can call some REST endpoints defined in ```com.example.coding_exercise.ui.controller.ContactController``` on default **port 8090** by application.properties configuration.
 
 ### REST information
 
 ```
-GET http://localhost:8080/contacts
-GET http://localhost:8080/contacts/{id}
-POST http://localhost:8080/contacts
-PUT http://localhost:8080/contacts/{id}
-DELETE http://localhost:8080/contacts/{id}
+GET http://localhost:8090/contacts
+GET http://localhost:8090/contacts/{id}
+POST http://localhost:8090/contacts
+PUT http://localhost:8090/contacts/{id}
+DELETE http://localhost:8090/contacts/{id}
 ```
 
 ### Create content
 
 ```
-POST http://localhost:8080/contacts
+POST http://localhost:8090/contacts
 Accept: application/json
 Content-Type: application/json
 
@@ -46,14 +47,14 @@ Content-Type: application/json
 }
 
 RESPONSE: HTTP 201 (Contact is created successfully)
-Location header: http://localhost:8080/contacts/{id}
+Location header: http://localhost:8090/contacts/{id}
 ```
 
 ### Retrieve contact or contacts
 
 ```
-http://localhost:8080/contacts
-http://localhost:8080/contacts/{id}
+http://localhost:8090/contacts
+http://localhost:8090/contacts/{id}
 
 Response: HTTP 200
 Content: contact or contacts in json 
@@ -62,7 +63,7 @@ Content: contact or contacts in json
 ### Update a hotel resource
 
 ```
-PUT http://localhost:8080/contacts
+PUT http://localhost:8090/contacts
 Accept: application/json
 Content-Type: application/json
 
